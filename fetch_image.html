@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hugo's Test Script</title>
+    </head>
+    <body>
+        <img src="" id="rainbow"/>
+        <script>
+            console.log("about to fetch rainbow");
+
+            async function catchRainbow(){
+                const response = await fetch('rainbow.png');
+                const blob = await response.blob();
+                document.getElementById('rainbow').src = URL.createObjectURL(blob);
+            }
+            
+            catchRainbow()
+                .then(response => {
+                    console.log("yay");
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
+    </body>
+</html>
