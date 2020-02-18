@@ -1,4 +1,4 @@
-let myList = [4, 8, 1, 6, 3, 7, 2];
+let myList = [9, 5, 7, 3, 6, 2, 1];
 
 for (let i = 0; i < myList.length; i++) {
 
