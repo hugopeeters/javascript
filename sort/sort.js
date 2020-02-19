@@ -1,10 +1,10 @@
 let sorter = new SortingHelper();
 
-// let myList = [9, 5, 7, 3, 6, 2, 1];
+let myList = [0,4,3,9,5,2,8,4];
 
 // sorter.selectionSort(myList);
 // sorter.bubbleSort(myList);
 // sorter.mergeSort(myList);
 
-let sortedList = [1,2,3,4,5,6,8,9,12,14,13,16,18,19];
-sorter.binarySearch(18, sortedList);
+let sortedList = [1,6,12,13,20,24,30,33,39,42,50];
+sorter.binarySearch(42, sortedList);

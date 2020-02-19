@@ -23,7 +23,7 @@ class SortingHelper {
             myList[index] = temp;
     
             //log
-            console.log(myList);
+            console.log(i + ": " + myList);
         }
     }
 
@@ -77,7 +77,7 @@ class SortingHelper {
 
     bubbleSort(myList) {
         let repeat = true;
-    
+        let counter = 0;
         while (repeat) {
     
             //repeat is false if we don't swap enything this pass
@@ -98,7 +98,8 @@ class SortingHelper {
             }
     
             //log
-            console.log(myList);
+            console.log(counter + ": " + myList);
+            counter++;
         }
     }
 
