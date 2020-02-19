@@ -101,4 +101,52 @@ class SortingHelper {
             console.log(myList);
         }
     }
+
+    binarySearch(searchValue, myList) {
+
+        //log
+        console.log("Looking in array: " + myList);
+
+        // compare with median:
+        let medianIndex = Math.floor(myList.length / 2);
+        
+        // if size of array is 1:
+        if (myList.length == 1) {
+
+            //     if the numbers match:
+            if (searchValue == myList[0]){
+                
+                //         return found
+                console.log("Found");
+                return true;
+                
+                //     else:
+            } else {
+                
+                //         return not found
+                console.log("Not found");
+                return false;
+            }
+        }
+
+        // if greater than median:
+        if (searchValue > myList[medianIndex]) {
+
+            //     compare with the second half
+            this.binarySearch(searchValue, myList.splice(medianIndex + 1, myList.length - medianIndex));
+            
+            // else if less than median:
+        } else if (searchValue < myList[medianIndex]) {
+
+            //     compare with the first half
+            this.binarySearch(searchValue, myList.splice(0, medianIndex));
+            
+            // else:
+        } else {
+            
+            //     return found
+            console.log("Found");
+            return true;
+        }
+    }
 }
